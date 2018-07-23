@@ -31,6 +31,7 @@ git push -u origin master
 cd <localrepofolder>
 rm -rf .git
 Start Repository (as above)
+git push -u --force origin master
 ```
 ## DELETING A FULL REMOTE REPO
 ```bash
