@@ -59,6 +59,9 @@ if __name__ == '__main__':
 ```
 
 ### Example 3
+
+Only one timer can use the lock at a given time in this example.\
+Use semaphores if you want 10 threads running but you only want 2 or 3 to have access to a piece of data at a time.
 ```python
 import threading
 import time
