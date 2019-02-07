@@ -4,6 +4,11 @@ Sort package list by size
 ```bash
 dpkg-query -W --showformat='${Installed-Size;10}\t${Package}\n' | sort -k1,1n
 ```
+Find all python installations
+```bash
+for p in $(compgen -c python); do printf "%-16s" $p; $p --version; done
+```
+
 List file and folder sizes in a directory
 ```bash
 du -sh *
@@ -12,14 +17,38 @@ Know the free space in a disk
 ```bash
 df -h .
 ```
+Open file explorer in folder
+```bash
+xdg-open file_or_dir
+```
+
+# Linux environment variables
+
+List environment variables
+```bash
+printenv
+```
+
+Export environment variable
+```bash
+export FLASK_APP=application.py
+```
+
+Show one variables
+```bash
+echo $PATH
+```
+
+Set global environment variables for system: ```/etc/environment```
+
+Set global environment variables for my session: ```~/.bashrc``` add lines ```export VAR=xxx```
 
 # Useful random commands
 
 List open connections\
 `lsof -i `
 
-Export environment variable\
-`export FLASK_APP=application.py`
+
 
 Check conection to host\
 `telnet localhost 7000`
