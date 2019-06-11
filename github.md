@@ -48,6 +48,20 @@ git config --global user.name "Manuel Solalinde"
 git config --global user.email "manolosolalinde@gmail.com"
 ```
 
+# UNTRACK FILES already added to git repository based on .gitignore
+```bash
+git rm -r --cached .
+git add .
+git commit -m ".gitignore fix"
+```
+    rm is the remove command
+    -r will allow recursive removal
+    --cached will only remove files from the index. Your files will still be there.
+    The . indicates that all files will be untracked. 
+    You can untrack a specific file with git rm --cached foo.txt (thanks @amadeann).
+
+
+
 ## GENERAL PURPOSE
 
 http://www.cheat-sheets.org/saved-copy/github-git-cheat-sheet.pdf
@@ -99,3 +113,4 @@ Combines the specified branch’s history into the current branch
 
 `git branch -d [branch-name]`\
 Deletes the specified branch
+
