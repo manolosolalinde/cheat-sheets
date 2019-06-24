@@ -73,3 +73,29 @@ First, if your user has sudo privileges, you must enable its NOPASSWD option. Ot
 `manolosolalinde ALL=(ALL) NOPASSWD:ALL`
 Close the editor to apply the changes, and test the effect on sudo in a new terminal.
 Delete the password for your user by running this command: sudo passwd -d `whoami`
+
+# services
+
+Edit specific service \
+`sudo systemctl edit servicename --full`
+
+Show specific service log (-f to tail)\
+`sudo journalctl -u servicename -f`
+
+Look a system log\
+`tail /var/log/syslog`
+
+Useful commands 
+```bash
+sudo systemctl enable application.service
+sudo systemctl disable application.service
+
+sudo systemctl start application.service
+sudo systemctl stop application.service
+systemctl status application.service
+systemctl is-active application.service
+systemctl is-enabled application.service
+systemctl is-failed application.service
+systemctl list-units
+```
+
